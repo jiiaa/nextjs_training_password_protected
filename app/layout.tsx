@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { inter } from '@/app/ui/fonts';
+import Link from "next/link";
+import { inter } from "@/app/ui/fonts";
 import "./ui/globals.css";
+import Navigation from "./ui/navigation";
 
 export const metadata: Metadata = {
   title: "Guide for Visitors",
@@ -13,12 +15,11 @@ export const metadata: Metadata = {
       index: false,
       follow: false,
       noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'none',
-      'max-snippet': -1,
-    }
-
-  }
+      "max-video-preview": -1,
+      "max-image-preview": "none",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fi">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }
