@@ -9,8 +9,8 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, _request) {
-        if (credentials?.password == "salainen") {
-          return { id: "0" };
+        if (credentials?.password == process.env.NEXTAUTH_PASSWORD) {
+          return { id: "0", name: "WovDanger", email: "wov@danger.com" };
         } else {
           return null;
         }
@@ -20,5 +20,6 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
-  secret: "thisisaverylongsecret",
+  secret: process.env.NEXTAUTH_SECRET,
+  pages: { signIn: "/signin" },
 };
