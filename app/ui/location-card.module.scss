@@ -1,0 +1,108 @@
+$mediaMaxWidth: 1280px;
+$mediaDesktopWidth: 1024px;
+$mediaTabletWidth: 768px;
+$mediaMobileWidth: 640px;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 0;
+  padding: 1rem;
+  width: 100%;
+  border: 4px solid #ef7d00;
+  transition: transform 0.3s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+
+    .pointer {
+      transition-delay: 0.3s;
+      transition-property: transform;
+      transform: translate(10px);
+    }
+  }
+}
+
+@media (min-width: $mediaTabletWidth) {
+  .card {
+    max-width: calc(33% - 28px);
+  }
+}
+
+.imageContainer {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: $mediaMobileWidth) {
+  .imageContainer {
+    display: none;
+    width: 100%;
+  }
+}
+
+@media (min-width: $mediaTabletWidth) {
+  .imageContainer {
+    display: block;
+    height: 11rem;
+  }
+}
+
+@media (min-width: $mediaDesktopWidth) {
+  .imageContainer {
+    display: block;
+    height: 12.5rem;
+  }
+}
+
+.textContainer {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .title {
+      color: #ef7d00;
+      font-size: 1.5rem;
+    }
+
+    svg {
+      color: #ef7d00;
+      width: 2rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .description {
+    margin-top: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+  }
+}
+
+.linkContainer {
+  margin-top: auto;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.pointer {
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
