@@ -11,6 +11,7 @@ export default function Page() {
 
   return (
     <main>
+      <title>The Island | VoWDanger</title>
       <h2>The Island</h2>
       <p>Client protected page.</p>
     </main>
