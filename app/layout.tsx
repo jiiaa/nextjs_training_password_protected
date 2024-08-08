@@ -1,11 +1,14 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import { Metadata } from "next";
 import { inter } from "@/app/ui/fonts";
 import "./ui/globals.css";
-import Navigation from "./ui/navigation";
+import Navigation from "@/app/ui/navigation";
+import Footer from "@/app/ui/footer";
 
 export const metadata: Metadata = {
-  title: "Guide for Visitors",
+  title: {
+    template: "%s | VowDanger",
+    default: "VowDanger",
+  },
   description: "Ohjeita johtajan tiluksilla vieraileville",
   robots: {
     index: false,
@@ -30,8 +33,11 @@ export default function RootLayout({
   return (
     <html lang="fi">
       <body className={`${inter.className} antialiased`}>
-        <Navigation />
-        {children}
+        <div className="container">
+          <Navigation />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
