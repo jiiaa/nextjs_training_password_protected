@@ -1,7 +1,25 @@
-.shape {
-    height: 0;
-    width: 0;
-    border-bottom: 30px solid black;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
+$mediaMaxWidth: 1280px;
+$mediaDesktopWidth: 1024px;
+$mediaTabletWidth: 768px;
+$mediaMobileWidth: 640px;
+
+p.intro {
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.locations {
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.75rem 1.75rem;
+}
+
+@media (max-width: $mediaMobileWidth) {
+  .locations {
+    flex-direction: column;
   }
+}
