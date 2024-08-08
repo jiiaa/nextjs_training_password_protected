@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { inter } from "@/app/ui/fonts";
 import "./ui/globals.css";
+import { Providers } from "@/app/providers";
 import Navigation from "@/app/ui/navigation";
 import Footer from "@/app/ui/footer";
 
@@ -33,11 +34,13 @@ export default function RootLayout({
   return (
     <html lang="fi">
       <body className={`${inter.className} antialiased`}>
-        <div className="container">
-          <Navigation />
-          {children}
-          <Footer />
-        </div>
+        <Providers>
+          <div className="container">
+            <Navigation />
+            {children}
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );
