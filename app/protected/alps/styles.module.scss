@@ -27,6 +27,7 @@ $mediaMobileWidth: 640px;
 
   &[open] > summary::before {
     transform: rotate(45deg);
+    transition: transform 0.3s ease;
   }
 }
 
@@ -37,6 +38,7 @@ $mediaMobileWidth: 640px;
 
   &[open] > summary::before {
     transform: rotate(45deg);
+    transition: transform 0.3s ease;
   }
 }
 
@@ -57,12 +59,14 @@ $mediaMobileWidth: 640px;
     top: -5px;
     font-size: 1.75rem;
     font-weight: 900;
+    transition: transform 0.3s ease;
   }
 
   &:hover,
   &:focus {
     background-color: #ef7d00;
     color: #fff;
+    transition: background-color 0.3s ease;
   }
 }
 

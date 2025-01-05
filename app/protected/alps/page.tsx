@@ -25,7 +25,7 @@ export default async function Page() {
           <span>Rue de la Montagne 67, 12345 Village, Ranska</span>
         </p>
         <p className={styles.text}>
-          <span>Server authentication. HTML5 accordion. SCSS styles.</span> Esse fugiat tempor in ex sint non cupidatat sint amet tempor minim
+          <span>Server authentication. HTML5 accordion. SCSS styles. Title as metadata.</span> Esse fugiat tempor in ex sint non cupidatat sint amet tempor minim
           esse nisi. Reprehenderit non occaecat laborum laboris anim labore
           dolore duis consequat officia veniam proident qui. Cupidatat amet ex
           veniam excepteur commodo officia. Incididunt excepteur adipisicing
