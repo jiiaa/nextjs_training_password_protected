@@ -1,0 +1,24 @@
+$mediaMaxWidth: 1280px;
+$mediaDesktopWidth: 1024px;
+$mediaTabletWidth: 768px;
+$mediaMobileWidth: 640px;
+
+.address {
+    margin-bottom: 1rem;
+    color: #fff;
+  
+    span {
+      font-weight: 800;
+    }
+}
+
+.text {
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: justify;
+  
+    span {
+      font-style: italic;
+    }
+}
+

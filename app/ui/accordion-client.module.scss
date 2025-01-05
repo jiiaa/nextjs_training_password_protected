@@ -1,0 +1,78 @@
+$mediaMaxWidth: 1280px;
+$mediaDesktopWidth: 1024px;
+$mediaTabletWidth: 768px;
+$mediaMobileWidth: 640px;
+
+.accordion {
+    margin-bottom: .5rem;
+}
+
+.accordionTitle {
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+    div {
+        width: fit-content;
+        padding-left: 0.1rem
+    }
+
+    &:hover > div,
+    &:focus > div,
+    &:hover svg,
+    &:focus svg {
+        background-color: #ef7d00;
+        color: #fff;
+        transition: background-color 0.3s ease;
+    }
+
+    svg {
+        display: inline-block;
+        margin-right: 0.5rem;
+        color: #ef7d00;
+        width: 1.2rem;
+        stroke-width: 5;
+        vertical-align: text-top;
+    }
+
+    .svgRotated {
+        transform: rotate(90deg);
+    }
+}
+
+.accordionContent {
+    opacity: 0;
+    margin-left: 2rem;
+    padding-left: 1rem;
+    border-left: 4px solid #ef7d00;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease, opacity 0.3s ease;
+}
+
+.accordionContent > div {
+    overflow: hidden;
+}
+
+.accordionOpen {
+    margin-bottom: 1.75rem;
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transition: grid-template-rows 0.4s ease, opacity 0.3s ease 0.1s;
+}
+
+.contentFlex {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+
+    .contentText {
+        flex-basis: 40%;
+        flex-grow: 1;
+    }
+
+    .contentImage {
+        flex-basis: 60%;
+        flex-grow: 4;
+    }
+}
