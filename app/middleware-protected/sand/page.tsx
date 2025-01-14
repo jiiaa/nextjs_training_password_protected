@@ -2,8 +2,10 @@ import AccordionClient from "@/app/ui/accordion-client";
 
 import styles from "./styles.module.scss";
 
-export default function Page() {
+import Content from "@/app/content/content.json";
 
+export default function Page() {
+  console.log(Content.alps[0]);
 
   return (
     <main>
