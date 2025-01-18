@@ -1,22 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { useSession } from "next-auth/react";
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 
 export default function Page() {
-  const { status } = useSession({ required: true });
-
   const itemClasses = {
     base: "bg-my-blue text-white border border-my-orange mb-4",
     title: "text-my-orange uppercase",
     subtitle: "text-my-orange",
     inidicator: "stroke-white",
   };
-
-  if (status == "loading") {
-    return "Loading...";
-  }
 
   return (
     <main>
