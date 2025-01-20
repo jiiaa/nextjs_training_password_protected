@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { Metadata } from "next";
 import { promises as fs } from "fs";
 import styles from "./styles.module.scss";
@@ -10,8 +12,15 @@ export const metadata: Metadata = {
 export default async function Page() {
   const file = await fs.readFile(process.cwd() + "/app/content/content.json", "utf8");
   const content = JSON.parse(file);
+  // console.log(content.alps);
 
-  console.log(content.alps);
+  const cookieStore = await cookies();
+  const cookieAuth = cookieStore.get("vowdanger_alps") || null;
+  console.log(cookieAuth?.value);
+
+  if (!cookieAuth) {
+    redirect("/signin?redirect=/protected/alps");
+  }
 
   return (
     <main>
