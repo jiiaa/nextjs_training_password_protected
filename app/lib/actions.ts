@@ -3,11 +3,13 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
-export async function handleSignin(formData: FormData) {
+type FormState = {
+  message: string;
+};
+
+export async function handleSignin(prevState: FormState, formData: FormData): Promise<FormState> {
   const password = formData.get("password") as string;
   const pathname = formData.get("redirect") as string;
-
-  console.log(formData);
 
   if (pathname.includes("alps")) {
     if (process.env.PASSWORD_ALPS === password) {
@@ -46,4 +48,6 @@ export async function handleSignin(formData: FormData) {
       redirect(pathname);
     }
   }
+
+  return { message: "Invalid password" };
 }
