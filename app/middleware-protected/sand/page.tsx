@@ -1,11 +1,20 @@
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+
 import AccordionClient from "@/app/ui/accordion-client";
-
 import styles from "./styles.module.scss";
-
 import Content from "@/app/content/content.json";
 
-export default function Page() {
-  console.log(Content.alps[0]);
+export default async function Page() {
+  // console.log(Content.alps[0]);
+
+  const cookieStore = await cookies();
+  const cookieAuth = cookieStore.get("vowdanger_sand") || null;
+  console.log(cookieAuth?.value);
+
+  if (!cookieAuth) {
+    redirect("/signin?redirect=/middleware-protected/sand");
+  }
 
   return (
     <main>
