@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { Metadata } from "next";
 import { promises as fs } from "fs";
+import { verifyJwt } from "@/app/lib/helpers";
 import styles from "./styles.module.scss";
 
 export const metadata: Metadata = {
@@ -16,9 +17,14 @@ export default async function Page() {
 
   const cookieStore = await cookies();
   const cookieAuth = cookieStore.get("vowdanger_alps") || null;
-  console.log(cookieAuth?.value);
 
   if (!cookieAuth) {
+    redirect("/signin?redirect=/protected/alps");
+  }
+
+  const token = verifyJwt(cookieAuth?.value);
+
+  if (token !== "/protected/alps") {
     redirect("/signin?redirect=/protected/alps");
   }
 
