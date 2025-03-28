@@ -25,7 +25,19 @@
         {
             "title": "Majoittuminen",
             "image": "",
-            "instructions": "Eu dolore duis sit elit commodo pariatur dolore sit deserunt eiusmod. Nisi dolore mollit consectetur elit irure deserunt. Velit mollit aliqua sunt nisi labore velit tempor sint tempor. Mollit magna aliqua non aliquip ea. Dolore irure adipisicing ad sint tempor ex tempor esse non eu voluptate consequat reprehenderit."
+            "instructions": "Eu dolore duis sit elit commodo pariatur dolore sit deserunt eiusmod. Nisi dolore mollit consectetur elit irure deserunt. Velit mollit aliqua sunt nisi labore velit tempor sint tempor. Mollit magna aliqua non aliquip ea. Dolore irure adipisicing ad sint tempor ex tempor esse non eu voluptate consequat reprehenderit.",
+            "subContent": [
+                {
+                    "title": "Sähköt",
+                    "instructions": "Velit laborum reprehenderit tempor sunt non labore ut elit.",
+                    "image": ""
+                },
+                {
+                    "title": "Vesi",
+                    "instructions": "Eu ex esse consequat ex. Ut exercitation anim esse adipisicing aute nisi eiusmod.",
+                    "image": ""
+                }
+            ]
         }
     ],
     "island": [],
