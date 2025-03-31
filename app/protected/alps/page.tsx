@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default async function Page() {
   const file = await fs.readFile(process.cwd() + "/app/content/content.json", "utf8");
   const content = JSON.parse(file);
-  const aplsContent = (content as ContentAlps).alps;
+  const alpsContent = (content as ContentAlps).alps;
 
   const cookieStore = await cookies();
   const cookieAuth = cookieStore.get("vowdanger_alps") || null;
@@ -51,7 +51,7 @@ export default async function Page() {
       </div>
       <section>
         {/* Map the content, max depth 2 */}
-        {aplsContent.map((item) => (
+        {alpsContent.map((item) => (
           <Accordion
             key={item.title}
             title={item.title}
@@ -63,7 +63,6 @@ export default async function Page() {
                 title={element.title}
                 image={element.image}
                 instructions={element.instructions}
-                subAccordion
               />
             ))}
           />

@@ -8,9 +8,9 @@ export default function Accordion({
     subAccordion,
 }: {
     title: string,
-    image: string | undefined,
-    instructions: string | undefined,
-    subAccordion: React.ReactNode,
+    image?: string,
+    instructions?: string,
+    subAccordion?: React.ReactNode,
 }) {
     return (
             <details className={styles.innerDetails}>

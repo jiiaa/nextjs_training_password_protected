@@ -8,7 +8,7 @@ import styles from "./accordion-client.module.scss";
 import Image from "next/image";
 
 export default function AccordionClient(
-  { title, image, children }: { title: string, image: string | undefined, children: React.ReactNode }
+  { title, image, children }: { title: string, image?: string, children?: React.ReactNode }
 ) {
   const [isOpen, setIsOpen] = useState(false);
 
