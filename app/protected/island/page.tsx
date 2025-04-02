@@ -39,7 +39,7 @@ export default async function Page() {
           <span className="font-extrabold">Mökkitie 1234, 45678 Saari, Suomi</span>
         </p>
         <p className="mb-8 text-justify">
-          <span className="italic">Client authentication. NextUI accordion. Tailwind styles. Title element inside main element.</span> Cupidatat mollit laborum nostrud deserunt irure dolore anim deserunt. Non et officia commodo dolore pariatur velit labore quis ipsum est. Labore excepteur incididunt sint cupidatat tempor ad quis consectetur dolor. Ut laboris sit laboris deserunt consectetur tempor mollit elit exercitation nostrud reprehenderit fugiat.
+          <span className="italic">NextUI accordion. Tailwind styles. Title element inside main element.</span> Cupidatat mollit laborum nostrud deserunt irure dolore anim deserunt. Non et officia commodo dolore pariatur velit labore quis ipsum est. Labore excepteur incididunt sint cupidatat tempor ad quis consectetur dolor. Ut laboris sit laboris deserunt consectetur tempor mollit elit exercitation nostrud reprehenderit fugiat.
         </p>
       </div>
       <section>

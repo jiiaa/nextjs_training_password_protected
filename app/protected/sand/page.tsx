@@ -26,7 +26,7 @@ export default async function Page() {
           <span>Palm Jumeirah, Dubai United Arab Emirates</span>
         </p>
         <p className={styles.text}>
-          <span>Accordion made of basic HTML elements and SCSS.</span> Ex incididunt velit voluptate aliquip aute do ipsum. Nostrud amet excepteur duis aliquip et aute occaecat commodo laboris deserunt velit ad occaecat quis. In velit minim in ut exercitation minim ex Lorem cupidatat deserunt dolore sint laboris aliqua. Culpa tempor tempor officia dolore est incididunt. Reprehenderit nisi aliqua consequat minim sunt eu amet ipsum proident occaecat.
+          <span>Accordion made of basic HTML elements and SCSS. Accordion module is a client module because useState.</span> Ex incididunt velit voluptate aliquip aute do ipsum. Nostrud amet excepteur duis aliquip et aute occaecat commodo laboris deserunt velit ad occaecat quis. In velit minim in ut exercitation minim ex Lorem cupidatat deserunt dolore sint laboris aliqua. Culpa tempor tempor officia dolore est incididunt. Reprehenderit nisi aliqua consequat minim sunt eu amet ipsum proident occaecat.
         </p>
       </div>
       <section>
