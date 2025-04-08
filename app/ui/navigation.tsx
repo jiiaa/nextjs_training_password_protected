@@ -16,7 +16,7 @@ const Home = HomeIcon;
 const links = [
   { name: "Alpit", href: "/protected/alps", icon: ChevronDoubleUpIcon },
   { name: "Saari", href: "/protected/island", icon: CloudIcon },
-  { name: "Hiekka", href: "/middleware-protected/sand", icon: SunIcon },
+  { name: "Hiekka", href: "/protected/sand", icon: SunIcon },
 ];
 
 export default function Navigation() {

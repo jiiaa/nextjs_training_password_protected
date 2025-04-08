@@ -24,7 +24,7 @@ $mediaMobileWidth: 640px;
     &:focus svg {
         background-color: #ef7d00;
         color: #fff;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     svg {
@@ -37,7 +37,7 @@ $mediaMobileWidth: 640px;
     }
 
     .svgRotated {
-        transform: rotate(90deg);
+        transform: rotate(45deg);
     }
 }
 

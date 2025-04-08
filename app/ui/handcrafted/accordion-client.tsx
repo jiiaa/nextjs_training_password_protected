@@ -8,7 +8,7 @@ import styles from "./accordion-client.module.scss";
 import Image from "next/image";
 
 export default function AccordionClient(
-  { title, image, children }: { title: string, image: string, children: React.ReactNode }
+  { title, image, children }: { title: string, image?: string, children?: React.ReactNode }
 ) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,7 +19,6 @@ export default function AccordionClient(
   const Icon = PlusIcon;
 
   return (
-    <section>
       <div className={styles.accordion}>
         <div onClick={() => handleClick()} className={styles.accordionTitle}>
           <div>
@@ -45,6 +44,5 @@ export default function AccordionClient(
           </div>
         </div>
       </div>
-    </section>
   )
 }
