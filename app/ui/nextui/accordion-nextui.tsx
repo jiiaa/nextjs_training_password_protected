@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import { Accordion, AccordionItem } from "@heroui/accordion";
 
 export default function AccordionHeroUi({
   title,
