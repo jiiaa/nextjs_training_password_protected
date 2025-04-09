@@ -2,11 +2,12 @@
 
 import { useFormState } from "react-dom";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { handleSignin } from "@/app//lib/actions";
 
 const initialState = { message: "", };
 
-export default function SignIn() {
+function Signin() {
   const [state, formAction] = useFormState(handleSignin, initialState);
   const searchRedirect = useSearchParams().get("redirect") || "/";
 
@@ -23,5 +24,13 @@ export default function SignIn() {
         {state?.message && <p className="mt-2 text-white">{state?.message} !</p>}
       </form>
     </main>
+  );
+}
+
+export default function SignInPage () {
+  return (
+    <Suspense fallback={<p>Loading...</p>}>
+      <Signin />
+    </Suspense>
   );
 }
